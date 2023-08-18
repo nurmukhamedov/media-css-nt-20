@@ -1,0 +1,218 @@
+header {
+    position: relative;
+    height: 100vh;
+    background-image: url('../images/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 96px;
+
+    @include for-phone {
+        background-image: url('../images/header-bg-mobile.jpg')
+    }
+}
+
+.hero {
+    @include center-item;
+    justify-content: center;
+    height: 100%;
+
+    &__content {
+        text-align: center;
+
+        &__title {
+            max-width: 446px;
+            font-size: 56px;
+            line-height: 67px;
+            font-weight: 700;
+            font-family: $header_font_title;
+            color: $white_color;
+            margin: 0 auto;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+            @include for-phone {
+                font-size: 28px;
+                line-height: 33px;
+                margin-bottom: 28px;
+                max-width: 296px;
+            }
+        }
+
+        &__text {
+            max-width: 520px;
+            margin: 0 auto;
+            color: $white_color;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 27px;
+            margin-bottom: 50px;
+            opacity: 0.8;
+
+            @include for-phone {
+                font-size: 16px;
+                line-height: 23px;
+                margin-bottom: 30px;
+            }
+        }
+
+        &__btn {
+            background-color: $button_color;
+            padding: 22px 56px;
+            color: $white_color;
+            border: none;
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 700;
+            font-family: $main_font;
+
+            @include for-phone {
+                width: 100%;
+            }
+        }
+    }
+}
+
+nav {
+    background-color: $white_color;
+    padding: 20px 0;
+}
+
+.navbar {
+    @include center-item;
+
+    @include for-small-desktop {
+        column-gap: 40px;
+    }
+
+    &__logo {
+        width: 122px;
+        height: 53px;
+    }
+
+    &__menu {
+        display: flex;
+        column-gap: 40px;
+
+        @include for-small-desktop {
+            column-gap: 30px;
+        }
+
+        @include for-tablet {
+            flex-direction: column;
+            position: fixed;
+            top: 60px;
+            right: 0;
+            background-color: $white_color;
+            z-index: 3;
+            height: 100vh;
+            width: 320px;
+            padding: 30px 10px 0 10px;
+            row-gap: 25px;
+            transform: translateX(100%);
+            transition: 0.5s ease;
+        }
+
+        &__item--mobile {
+            display: none;
+
+            @include for-tablet {
+                display: block;
+                height: 60%;
+            }
+        }
+
+        &__link {
+            color: $primary_color;
+            text-decoration: none;
+            font-weight: 500;
+            line-height: 16px;
+            font-size: 16px;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+        column-gap: 63px;
+
+        @include for-small-desktop {
+            &__contact {
+                column-gap: 51px;
+            }
+        }
+
+        @include for-tablet {
+            display: none;
+        }
+
+        &--mobile {
+            @include for-tablet {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+            }
+        }
+
+        &__icons {
+            display: flex;
+            column-gap: 15px;
+        }
+
+        &__phone {
+            text-decoration: none;
+            color: $secondary_color;
+            font-family: $header_font_title;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__add {
+        display: none;
+
+        @include for-small-desktop {
+            display: block;
+        }
+    }
+
+    &__add button {
+        background: none;
+        border: none;
+    }
+
+    &__remove__btn {
+        display: none;
+    }
+}
+
+.btn {
+    max-width: 300px;
+    background-color: $button_color;
+    padding: 22px 0;
+    color: $white_color;
+    border: none;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    font-family: $main_font;
+}
+
+.show {
+    transform: translateX(0);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    header {
+        background-image: url('../images/header-bg-2.jpg');
+
+        @include for-phone {
+            background-image: url('../images/header-bg-mobile-2.jpg');
+        }
+    }
+}

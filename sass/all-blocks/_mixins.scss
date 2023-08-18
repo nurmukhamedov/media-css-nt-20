@@ -1,0 +1,33 @@
+@mixin center-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin for-small-desktop {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin for-tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-phone {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin section-titles {
+    font-size: 46px;
+    line-height: 57px;
+    font-weight: 600;
+    color: $primary_color;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+}

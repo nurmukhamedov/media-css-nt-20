@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+@import './all-blocks/variables';
+@import './all-blocks/mixins';
+
+body {
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.secondary-container {
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@import './all-blocks/header';
+@import './all-blocks/service';
+@import './all-blocks/info';

@@ -1,0 +1,52 @@
+.info {
+    background-color: $secondary_color;
+    margin-top: 140px;
+    padding: 100px 0;
+
+    &__title {
+        text-align: center;
+        @include section-titles;
+        color: $white_color;
+
+        @include for-tablet {
+            font-size: 36px;
+            line-height: 45px;
+        }
+
+        @include for-phone {
+            font-size: 24px;
+            line-height: 32px;
+            max-width: 238px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 280px;
+        row-gap: 70px;
+        margin-top: 70px;
+
+        @include for-phone {
+            column-gap: 80px;
+            row-gap: 50px;
+        }
+    }
+
+    &__card {
+        max-width: 100px;
+        text-align: center;
+
+        &__img {
+            display: block;
+        }
+
+        &__span {
+            color: $white_color;
+            opacity: 0.5;
+            font-size: 24px;
+            line-height: 31px;
+        }
+    }
+}

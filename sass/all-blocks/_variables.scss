@@ -1,0 +1,16 @@
+@import './fonts';
+
+$header_font_title: 'Lato Bold', sans-serif;
+$primary_font_title: 'Raleway bold', sans-serif;
+$main_font: 'Raleway regular', sans-serif;
+$primary_color: #282B22;
+$secondary_color: #3D4A39;
+$button_color: #AE7B3C;
+$gray_color: #F3F3F3;
+$white_color: #FFFFFF;
+
+
+
+.title {
+    font-family: $header_font_title;
+}

@@ -1,0 +1,109 @@
+.service {
+    margin-top: 140px;
+
+    &__title {
+        text-align: center;
+        font-size: 46px;
+        line-height: 57px;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        @include for-phone {
+            font-size: 28px;
+            line-height: 33px;
+            font-family: $primary_font_title;
+            font-weight: 700;
+            max-width: 250px;
+            margin: 0 auto;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+
+        @include for-tablet {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            row-gap: 60px;
+        }
+
+        @include for-phone {
+            row-gap: 50px;
+            justify-content: center;
+        }
+    }
+
+    &__card {
+        max-width: 384px;
+        width: 100%;
+        padding: 0 30px;
+        border-right: 1px solid #D4D5D3;
+
+        @include for-small-desktop {
+            max-width: 300px;
+        }
+
+        @include for-tablet {
+            max-width: 280px;
+            border: none;
+            border-left: 1px solid #D4D5D3;
+        }
+
+        @include for-phone {
+            border: none;
+            max-width: 300px;
+            padding: 0;
+        }
+
+        &:first-child {
+            border-left: 1px solid #D4D5D3;
+
+            @include for-phone {
+                border: none;
+            }
+        }
+
+        &__span {
+            font-size: 24px;
+            line-height: 24px;
+            opacity: 0.5;
+            color: #282B22;
+            font-weight: 600;
+
+            @include for-phone {
+                font-size: 20px;
+                line-height: 29px;
+            }
+
+        }
+
+        &__title {
+            color: $secondary_color;
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: 600;
+            padding: 60px 0 30px 0;
+
+            @include for-phone {
+                font-size: 20px;
+                line-height: 29px;
+                padding: 20px 0 15px 0;
+            }
+        }
+
+        &__img {
+            max-width: 354px;
+            width: 100%;
+
+            @include for-phone {
+                max-width: 300px;
+                width: 300px;
+                height: 320px;
+                object-fit: cover;
+            }
+        }
+    }
+}
